@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Team Management</title>
+    <link rel="stylesheet" href="admin_styles.css">
+
+<!-- Firebase SDK's -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Initialize Firebase -->
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBArtZfsUtOII_pXSC9Sy9OY9NqcuJZ62w",
+        authDomain: "marketing-projecten-database.firebaseapp.com",
+        databaseURL: "https://marketing-projecten-database-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "marketing-projecten-database",
+        storageBucket: "marketing-projecten-database.appspot.com",
+        messagingSenderId: "971146430762",
+        appId: "1:971146430762:web:5744a98df83fbd4b563653"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel - Manage Teams</h1>
+
+        <div class="team-form">
+            <h3 id="form-title">Add New Team</h3>
+            <input type="text" id="team-name" placeholder="Team Name">
+            <button id="save-team">Save Team</button>
+            <button id="delete-team" style="display: none; background-color: red;">Delete Team</button>
+        </div>
+
+        <ul id="team-list">
+            <!-- Teams will be dynamically inserted here -->
+        </ul>
+    </div>
+
+    <script src="admin_script.js"></script>
+</body>
+</html>
